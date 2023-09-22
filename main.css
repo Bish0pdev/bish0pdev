@@ -1,72 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu:ital,wght@0,500;1,500&display=swap');
-
 body{
-    background: rgb(73,83,149);
-background: linear-gradient(180deg, rgba(73,83,149,1) 0%, rgba(247,191,145,1) 60%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    margin: 0;
+    font-size: 100%;
+    background-color: black;
 }
-.Banner-card {
-    position: relative;
-    text-align: center;
+.About-card{
+    font-family: 'Source Code Pro', monospace;
     color: white;
-}
-.Banner-card img{
-    max-width: 100%;
-    height: auto;
-}
-.Banner-text {
-    background-color: rgba(0, 0, 0, 0.534);
+    z-index: 1;
     position: absolute;
-    top: 35%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    
-    font-size: 3vw;
+    top: 20%;
+    left: 55%;
+    width: 25%;
+    text-align: center;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
     text-shadow:
    -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-     font-family: 'Source Code Pro', monospace;
-     
-    animation: titleload 2000ms;
-    transition-duration: 300ms;
-    
 }
-.Banner-text:hover {
-    scale: 1.2;
-    left: 55%;
-    background-color: rgba(0, 0, 0, 1);
-    user-select: none;
-}
-.Banner-text::after{
-    content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: blue;
-  transform-origin: bottom right;
-  transition: transform 0.1s ease-out;
-}
-.Banner-text:hover::after{
-    transform: scaleX(1);
-  transform-origin: top left;
-}
-.Banner-text a{
-    text-decoration: none;
+a {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    display: inline block;
+    color: lightblue;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    font-size: 1.2em;
+  }
+a:hover {
+    box-shadow: inset 100px 0 0 0 black;
     color: white;
+  }
+ul {
+    display: inline-block;
+    list-style-type: none;
 }
-@keyframes titleload {
-    0% {
-        opacity: 0%;
-        transform: translate(-50%, -20%);
-        pointer-events: none;
-    }
-    100% {
-        opacity: 100%;
-        transform: translate(-50%, -50%);
-        pointer-events: all;
-    }
+li {
+    padding: 10px;
+}
+.ghost_img{
+    background-image: url(imgs/ghost.jpg);
+    z-index: -1;
+  background-color: black; /* Used if the image is unavailable */
+  position: static;
+  height: 100vh; /* You must set a specified height */
+  background-position: 50% 60%; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
