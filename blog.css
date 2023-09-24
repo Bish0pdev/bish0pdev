@@ -1,25 +1,19 @@
-/* Reset some default styles */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Global styles */
+/* Global styles for the Futuristic Theme */
 body {
-    font-family: 'Courier New', monospace;
+    font-family: 'Orbitron', sans-serif;
     background-color: #000; /* Black background color */
     color: #0f0; /* Green text color */
+    line-height: 1.6;
     padding: 20px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for content */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); /* Green box shadow for the container */
     padding: 20px;
-    background-color: #000; /* Black background for content */
-    border: 1px solid #0f0; /* Green border */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green box shadow */
 }
 
 header {
@@ -39,15 +33,16 @@ label[for="search"] {
     display: inline;
     margin-bottom: 10px;
     font-size: 18px;
+    color: #0f0; /* Green accent color */
 }
 
 #search {
     width: 50%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #0f0; /* Green border for input */
+    border: none;
     border-radius: 5px;
-    background-color: #000; /* Black input background */
+    background-color: #111; /* Dark gray input background */
     color: #0f0; /* Green text color */
 }
 
@@ -55,18 +50,16 @@ label[for="search"] {
 .post {
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #0f0; /* Green border for posts */
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black post background */
+    border-radius: 10px;
     cursor: pointer;
+    border: 1px solid #0f0; /* Green border for posts */
 }
 
 .post:hover {
-    background-color: #242424; /* Black background on hover */
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background on hover */
 }
-.post h2::after{
-    content: "   @Bish0p";
-    font-size: 50%;
-}
+
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
