@@ -3,20 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishop Dev</title>
-    <link rel="stylesheet" type="text/css" href="Landing.css" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="blog.css">
 </head>
 <body>
-    <div class="Banner-card">
-        
-        <div class="Banner-text" id="professional-link">
-            <a type="button" href="About.html">Matthew Butler.</a>
-        </div>
-    </div>
-        <div class="Banner-text" id="personal-link">
-            <a type="button" href="About.html">Bishop.</a>
-        </div>
+    <header>
+         <h1>Bish0p Bl0gz</h1>
+    </header>
     
-</div>
+    <div class="container">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search">
+        <div class="post">
+            <h2>Welcome to my blog!</h2>
+            <p>Hey! I'm a 17 year old Christain gamedev/software dev. This will kinda be my way of keeping track of my life and honestly just writing random stuff. I love programming and the idea of making video games for a living, as playing video games is what I spend 90% of my time doing anyways lol. I have a girlfriend of 4 years who I love and adore greatly. </p>
+            <p>GF-OS-IT (God First) (Others Second) <b>(I'm Third)</b></p>
+        </div>
+        <div class="post">
+            <h2>Brain Hurt</h2>
+            <p>About 2-3 months ago, I had a major psychotic episode and hurt many people around me. At the time, we didn’t know what this was, possibly a sudden bipolar onset? Probably not, I'd never experienced anything like this ever in my life before. Maybe some extreme traumatic brain injury I gave myself skateboarding? Possibly.
+                In reality, I have two major arachnoid cysts in my brain that are compressing my brain and causing all types of problems. Normally, arachnoid cysts are not symptomatic. (at least that’s what every doctor we talked to before we were sure that was the problem said.) My psychotic craziness ended up forcing me to quit my job at Best Buy. I was hurting people and was not able to do my job, I said many things that I regret and almost got into a fight with someone. I had a lot of friends I valued there… Then, I hurt my girlfriend and my sister, I did things that I’m not willing to talk about here because they were honestly disgusting, and even though I was in a state of psychosis, I still did these things and hurt the people I loved most. If I’m being honest that was the worst part.
+
+                I’m trying not to dwell…
+            </p>
+        </div>
 </body>
+<script>
+    // Function to filter and display blog posts based on search terms
+function searchPosts() {
+    const searchTerm = document.getElementById('search').value.toLowerCase();
+    const posts = document.querySelectorAll('.post');
+
+    posts.forEach((post) => {
+        const postTitle = post.querySelector('h2').textContent.toLowerCase();
+        const postContent = post.querySelector('p').textContent.toLowerCase();
+
+        if (postTitle.includes(searchTerm) || postContent.includes(searchTerm)) {
+            post.style.display = 'block'; // Show the matching post
+        } else {
+            post.style.display = 'none'; // Hide non-matching posts
+        }
+    });
+}
+
+// Add an event listener to the search input field for the 'input' event
+document.getElementById('search').addEventListener('input', searchPosts);
+// Function to toggle post content visibility when the post is clicked
+function togglePostContent(event) {
+    const post = event.currentTarget;
+    const contents = post.querySelectorAll('p'); // Select all <p> elements within the clicked post
+
+    contents.forEach((content) => {
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+
+    // Hide or show other posts
+    const postContainers = document.querySelectorAll('.post'); // Select all post containers
+    postContainers.forEach((otherPost) => {
+        if (otherPost !== post) {
+            const otherContents = otherPost.querySelectorAll('p');
+            otherContents.forEach((otherContent) => {
+                otherContent.style.display = 'none'; // Hide content in other posts
+            });
+        }
+    });
+}
+
+// Add event listeners to each post container
+const postContainers = document.querySelectorAll('.post');
+postContainers.forEach((post) => {
+    post.addEventListener('click', togglePostContent);
+});
+</script>
 </html>

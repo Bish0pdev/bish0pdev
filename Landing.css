@@ -65,9 +65,9 @@ body{
     display: block;
 }
 #personal-link {
-    position: fixed;
-    width: fit-content;
-    margin-top: auto;
+    position: absolute;
+    top:90%;
+    animation: titleload 30000ms;
 }
 #personal-link::after{
     background-color: purple;

@@ -1,0 +1,102 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000; /* Black background color */
+    color: #0f0; /* Green text color */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000; /* Black background for content */
+    border: 1px solid #0f0; /* Green border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green box shadow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0f0; /* Green accent color */
+}
+
+/* Styles for the search input */
+label[for="search"] {
+    display: inline;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#search {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #0f0; /* Green border for input */
+    border-radius: 5px;
+    background-color: #000; /* Black input background */
+    color: #0f0; /* Green text color */
+}
+
+/* Styles for blog posts */
+.post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #0f0; /* Green border for posts */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: #242424; /* Black background on hover */
+}
+.post h2::after{
+    content: "   @Bish0p";
+    font-size: 50%;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0f0; /* Green accent color */
+}
+
+p {
+    font-size: 16px;
+    display: none; /* Hide post content by default */
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #search {
+        font-size: 14px;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
