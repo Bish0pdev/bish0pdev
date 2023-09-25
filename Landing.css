@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu:ital,wght@0,500;1,500&display=swap');
 
-body{
+/* Background Styles */
+body {
     background-image: url(imgs/Banner.jpg);
+    background-color: black;
+    position: static;
+    height: 100vh;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
     z-index: -1;
-  background-color: black; /* Used if the image is unavailable */
-  position: static;
-  height: 100vh; /* You must set a specified height */
-  background-position: 50% 10%; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  overflow: hidden;
-  background-size: cover; /* Resize the background image to cover the entire container */
 }
+
 .Banner-card {
     position: relative;
     text-align: center;
@@ -64,14 +66,26 @@ body{
     color: white;
     display: block;
 }
+
+/* Banner Text Link Styles */
+.banner-text a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Personal Link Styles */
 #personal-link {
     position: absolute;
-    top:90%;
-    animation: titleload 30000ms;
+    top: 90%;
+    animation: titleload 2000ms; /* Adjust the animation duration */
 }
-#personal-link::after{
+
+#personal-link::after {
     background-color: purple;
 }
+
+/* Keyframe Animation */
 @keyframes titleload {
     0% {
         opacity: 0%;
@@ -82,5 +96,12 @@ body{
         opacity: 100%;
         transform: translate(-50%, -50%);
         pointer-events: all;
+    }
+}
+
+/* Media Query for Responsive Font Size */
+@media screen and (max-width: 768px) {
+    .banner-text {
+        font-size: 4vw; /* Adjust as needed for smaller screens */
     }
 }
