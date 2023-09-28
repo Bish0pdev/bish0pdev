@@ -11,6 +11,9 @@
         <h1  class="line-1 anim-typewriter">Matthew Butler</h1>
     </header>
     <div class="container">
+        <p id="Quote">Que sera sera</p>
+    </div>
+    <div class="container">
         <h2>About</h2>
         <div class="img-card">
         <img src="imgs/Banner.jpg">
@@ -22,4 +25,27 @@
         <a class="project-link" href="https://blog.bishop-dev.com">My blog</a>
       </div>
 </body>
+<script>
+    async function randomquote() {
+        const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '5d4a29b4e5mshcad298894e36ed3p14ea05jsn0b643f18f9cc',
+		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+	}
+};
+
+try {
+    const qutoep = document.getElementById("Quote");
+	const response = await fetch(url, options);
+	let result = await response.text();
+	result = JSON.parse(result);
+    qutoep.innerText = result.content + " -" + result.originator.name;
+} catch (error) {
+	console.error(error);
+}
+    }
+randomquote();
+</script>
 </html>

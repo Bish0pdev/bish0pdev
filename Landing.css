@@ -14,7 +14,7 @@ header {
     text-align: center;
     
 }
-h2 {
+h2,p {
   text-align:center;
 }
 .container {
@@ -42,6 +42,7 @@ h2 {
   
   .container p {
     flex: 1; /* Allow the paragraph to take up remaining space */
+    text-align: left;
   }
 .project-link {
     display: block;
