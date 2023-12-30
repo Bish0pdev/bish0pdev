@@ -1,8 +1,4 @@
-# Welcome to Bishopdev's GitHub Profile 👋
-
-Hey there! I'm Bishopdev, a passionate web developer on a journey to create awesome web experiences. I'm thrilled to share my coding adventures with you. Feel free to explore my repositories and join me on my coding journey!
-
-## About Me
+# About Me
 
 - 🚀 My website: [bishop-dev.com](https://bishop-dev.com) - Check it out to see some of my projects and learn more about what I do.
 - 🌐 I'm familiar with a variety of programming languages, including C#, C++, Python, Java, HTML, CSS, and JavaScript.
@@ -16,6 +12,6 @@ I'd love to connect with fellow developers and enthusiasts. You can reach out to
 - Discord: [Bishop](discordapp.com/users/512482353570906112)
 - LinkedIn: [Matthew Butler](https://www.linkedin.com/in/matthew-butler-177a53276/)
 
-Feel free to send me a message, collaborate on projects, or just say hello! 🚀
+Feel free to send me a message, collaborate on projects, or just say hello!
 
 ## Thank You!
