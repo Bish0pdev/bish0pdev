@@ -30,9 +30,16 @@ h2,p {
   animation-delay: 3000ms;
   animation-fill-mode: forwards;
 }
+.container:nth-child(1) {
+  animation-delay: 0ms;
+}
+.container:nth-child(2) {
+  animation-delay: 1000ms; /* Adjust the delay for the third container */
+}
+
 .img-card{
     display: flex; /* Add this to make the container a flex container */
-  align-items: center; /* Center items vertically */
+  align-items:center; /* Center items vertically */
 }
 .container img {
     max-width: 30%;
@@ -55,13 +62,25 @@ h2,p {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
+a{
+    display: block;
+    text-align: left;
+    text-decoration:underline;
+    color: #E0D8C3;
+    border-radius: 5px;
+}
+a:hover{
+  color: #EEE7CF;
+}
+i{
+  text-align: center;
+}
 .project-link:hover {
     background-color: #C0B8A3;
 }
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 2s steps(40) 1s 1 normal both
+  animation: typewriter 1s steps(40) .3s 1 normal both
 }
 @keyframes typewriter{
   from{width: 0;}
