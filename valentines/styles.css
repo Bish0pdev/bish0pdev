@@ -43,8 +43,8 @@ body {
     transform: translateY(0);
 }
 img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 400px;
+    max-height: 400px;
 }
 .container.hidden {
     transform: translateY(100%);
