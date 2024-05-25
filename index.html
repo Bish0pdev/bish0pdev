@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,61 +7,129 @@
     <link rel="stylesheet" href="Landing.css">
 </head>
 <body>
-    <header>
-        <h1  class="line-1 anim-typewriter">Matthew Butler</h1>
-    </header>
     
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="img-card">
-        <img src="imgs/Banner.jpg">
-        <p>Hey! I am a 18 year old programmer who is currently attending Navarro College in Midlothian, TX. I am set to graduate spring 2024 with my AAS in software development. One of my main passions in life is technology, programming and sales. For the last few years, I have been working in the inventory/logistics industry, but I am hoping for a way into the technical field. I have 10 years of experieance using C# and the Unity Game Engine. I also know python, c++, html, css, and JS. </p>
-      </div>
-      <br>
-      <i>I am currently activly looking for work. If you have any oppertunities avalable <b>please contact me!</b></i>
-    </div>
-    <div class="container">
-        <p id="Quote">Que sera sera</p>
-    </div>
-    <div class="container">
-        <h2>My Projects</h2>
-        <a class="project-link" href="https://os.bishop-dev.com">Bishop_os</a>
-        <a class="project-link" href="https://github.com/Bish0pdev/BParticles/tree/Main">BParticles</a>
-    </div>
-    <div class="container">
-        <h2>Contact Me</h2>
-        <ul>
-            <li>Phone Number: 469-644-4166 (Perferred)</li>
-            <li><a href="mailto:butlermatthew0512@gmail.com">butlermatthew0512@gmail.com</a></li>
-        </ul>
-        <h2>Socials</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/matthew-butler-177a53276/">Linkedin</a></li>
-            <li><a href="https://github.com/Bish0pdev">Github</a></li>
-        </ul>
-    </div>
-</body>
-<script>
-    async function randomquote() {
-        const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '5d4a29b4e5mshcad298894e36ed3p14ea05jsn0b643f18f9cc',
-		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
-	}
-};
+    <div id="container">
+        <pre class="center"><code>
+/$$       /$$           /$$                                 /$$                     
+| $$      |__/          | $$                                | $$                     
+| $$$$$$$  /$$  /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$    /$$
+| $$__  $$| $$ /$$_____/| $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$|  $$  /$$/
+| $$  \ $$| $$|  $$$$$$ | $$  \ $$| $$  \ $$| $$  \ $$| $$  | $$| $$$$$$$$ \  $$/$$/ 
+| $$  | $$| $$ \____  $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$_____/  \  $$$/  
+| $$$$$$$/| $$ /$$$$$$$/| $$  | $$|  $$$$$$/| $$$$$$$/|  $$$$$$$|  $$$$$$$   \  $/   
+|_______/ |__/|_______/ |__/  |__/ \______/ | $$____/  \_______/ \_______/    \_/    
+                                            | $$                                     
+                                            | $$                                     
+                                |__/                       
+            </code></pre>
 
-try {
-    const qutoep = document.getElementById("Quote");
-	const response = await fetch(url, options);
-	let result = await response.text();
-	result = JSON.parse(result);
-    qutoep.innerText = result.content + " -" + result.originator.name;
-} catch (error) {
-	console.error(error);
-}
-    }
-randomquote();
-</script>
+        <div class="center">
+            <a href="bl0g.html">
+            <img alt="self portrait" id="self-portrait" src="imgs/Banner.gif">
+            </a>
+        </div>
+
+        <div class="center">
+            <p>You found my website!</p>
+            <i>I am open for work in the software development field.<br> If you have any opportunities available <br><b>please contact me!</b></i>
+        </div>
+
+        <pre class="center"><code><span class="alt">-----------------------------------------------
+        </span></code></pre>
+
+        <div class="container">
+                <ul class="tree">
+                    <li>
+                        <span class="caret">Unity (10+)</span>
+                        <ul class="nested">
+                            <li>C#(10+)</li>
+                            <li>HLSL(4+)</li>
+                            <li>Game Design (1+)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret">Web Development</span>
+                        <ul class="nested">
+                            
+                            <li>HTML (2+)</li>
+                            <li>CSS (2+)</li>
+                            <li>JS (2+)</li>
+                            <li>Node.Js (1+ professionally)</li>
+                            <li>Express with Node.JS (1+ professionally)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret">Other Languages</span>
+                        <ul class="nested">
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>(learning) Bash</li>
+                        </ul>
+                    </li>
+                </ul>
+            <br>
+        </div>
+        </code></pre>
+        <br>
+        <div class="container">
+            <h2>My Projects</h2>
+            <br>
+            <h4>Currently Working On</h4>
+            <a class="alt project-link " href="https://github.com/Bish0pdev/BishEditor">BishEditor</a>
+            <br>
+            <a class="project-link" href="https://os.bishop-dev.com">Bishop_os</a>
+            <a class="project-link" href="https://github.com/Bish0pdev/BParticles/tree/Main">BParticles</a>
+        </div>
+        <br>
+        <div class="container">
+            <h2>Socials</h2>
+            <ul>
+                <li class="social-link"><a href="https://github.com/Bish0pdev">Github</a></li>
+            </ul>
+            <br><br>
+            <h2>Contact Me</h2>
+            <ul>
+                <li><a href="mailto:butlermatthew0512@gmail.com">butlermatthew0512@gmail.com</a></li>
+            </ul>
+            <br>
+            
+        </div>
+    </div>
+
+    <script>
+        async function randomquote() {
+            const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '5d4a29b4e5mshcad298894e36ed3p14ea05jsn0b643f18f9cc',
+                    'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const quoteElement = document.getElementById("Quote");
+                const response = await fetch(url, options);
+                let result = await response.text();
+                result = JSON.parse(result);
+                quoteElement.innerText = result.content + " -" + result.originator.name;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    document.addEventListener("DOMContentLoaded", function() {
+        randomquote();
+        const toggler = document.getElementsByClassName("caret");
+    
+        for (let i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function() {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+            }
+        });
+        
+    </script>
+</body>
 </html>
