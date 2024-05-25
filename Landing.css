@@ -1,193 +1,213 @@
 html, body, * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 :root {
-	--text-color-bright: #ffffff;
-	--text-color-dim: #ffffff;
-	--text-color-alt: #9400b9;
+    --text-color-bright: #ffffff;
+    --text-color-dim: #ffffff;
+    --text-color-alt: #9400b9;
 }
 body {
-	background-color: #000;
-	font-family: monospace;
-	font-size: 12px;
-	color: var(--text-color-bright);
+    background-color: #000;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--text-color-bright);
 }
 body::before {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: repeating-linear-gradient(to bottom,rgba(27, 27, 27, 0.1) 0px, /* Increase opacity for more visibility */
-	rgba(0, 0, 0, 0.2) 2px, /* Increase the line width */
-	transparent 2px,transparent 4px /* Increase the spacing between lines */
-	);
-	pointer-events: none;
-	z-index: 1;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(to bottom, rgba(27, 27, 27, 0.1) 0px, /* Increase opacity for more visibility */
+        rgba(0, 0, 0, 0.2) 2px, /* Increase the line width */
+        transparent 2px, transparent 4px /* Increase the spacing between lines */
+    );
+    pointer-events: none;
+    z-index: 1;
 }
 body::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255, 255, 255, 0.0);
-	/* Adjust opacity for the desired effect */
-	pointer-events: none;
-	z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.0);
+    /* Adjust opacity for the desired effect */
+    pointer-events: none;
+    z-index: 2;
 }
 #container {
-	margin: 6px auto;
-	padding-bottom: 5px;
-	min-width: 650px;
-	max-width: 800px;
-	text-align: center;
-	outline: #12402080 1px solid;
-	position: relative;
-	animation: fadeIn 0.5s ease;
+    margin: 6px auto;
+    padding-bottom: 5px;
+    min-width: 300px;
+    max-width: 800px;
+    text-align: center;
+    outline: #12402080 1px solid;
+    position: relative;
+    animation: fadeIn 0.5s ease;
 }
 .center {
-	text-align: center;
+    text-align: center;
 }
 a, a:visited, a:active {
-	text-decoration: none;
-	color: var(--text-color-dim);
+    text-decoration: none;
+    color: var(--text-color-dim);
 }
 a:hover {
-	background-color: #000000;
+    background-color: #000000;
 }
 #self-portrait {
-	margin: 5px 0;
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
-	/*border: 1px solid white;
-	*/
+    margin: 5px 0;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 p {
-	margin: 10px;
+    margin: 10px;
 }
 .footer {
-	text-align: center;
-	font-size: 12px;
+    text-align: center;
+    font-size: 12px;
 }
 .alt {
-	color: var(--text-color-alt) !important;
-	font-style: italic;
+    color: var(--text-color-alt) !important;
+    font-style: italic;
 }
 .bright {
-	color: var(--text-color-bright);
+    color: var(--text-color-bright);
 }
 .dim {
-	color: var(--text-color-dim);
+    color: var(--text-color-dim);
 }
 .anim-typewriter {
-	animation: typewriter 1s steps(40) 0.3s 1 normal both;
+    animation: typewriter 1s steps(40) 0.3s 1 normal both;
 }
-li{
-	list-style-type: none;
+li {
+    list-style-type: none;
 }
 /* Basic styles for the list */
 .tree, .nested {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 .tree .caret {
-	cursor: pointer;
-	user-select: none;
-	font-size: large;
-	/* Prevent text selection */
+    cursor: pointer;
+    user-select: none;
+    font-size: large;
+    /* Prevent text selection */
 }
-
 .tree .caret::before {
-	content: "\25B6";
-	/* Unicode character for arrow pointing right */
-	color: rgb(255, 255, 255);
-	display: inline-block;
-	margin-right: 6px;
-	transition: transform 0.3s ease;
-	/* Smooth transition for arrow rotation */
+    content: "\25B6";
+    /* Unicode character for arrow pointing right */
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.3s ease;
+    /* Smooth transition for arrow rotation */
 }
 .tree .caret-down::before {
-	transform: rotate(90deg);
-	/* Rotate arrow to point down */
+    transform: rotate(90deg);
+    /* Rotate arrow to point down */
 }
 .nested {
-	display: none;
-	overflow: hidden;
-	transition: max-height 0.3s ease;
-	/* Smooth transition for expand/collapse */
-	max-height: 0;
-	/* Initially set max-height to 0 */
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    /* Smooth transition for expand/collapse */
+    max-height: 0;
+    /* Initially set max-height to 0 */
 }
 .active {
-	display: block;
-	max-height: 500px;
-	/* Adjust max-height based on the content */
+    display: block;
+    max-height: 500px;
+    /* Adjust max-height based on the content */
 }
 /* Adding animation to fade in the list items */
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .nested li {
-	animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease;
 }
 @keyframes ease-in {
-	0% {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .project-link {
-	color: var(--text-color-bright);
-	display: block;
-	font-size: large;
-	transition: scale 0.1s;
+    color: var(--text-color-bright);
+    display: block;
+    font-size: large;
+    transition: scale 0.1s;
 }
-.alt::before{
-	color: var(--text-color-alt);
+.alt::before {
+    color: var(--text-color-alt);
 }
-.alt::after{
-	color: var(--text-color-alt);
+.alt::after {
+    color: var(--text-color-alt);
 }
-.project-link:hover{
-	scale: 1.1;
-	background: none;
+.project-link:hover {
+    scale: 1.1;
+    background: none;
 }
 .project-link::before {
-	content: "----------------------";
-	display: block;
+    content: "----------------------";
+    display: block;
 }
-.project-link::after{
-	content: "-------------------";
-	display: block;
+.project-link::after {
+    content: "-------------------";
+    display: block;
 }
-.social-link{
-	font-size: large;
-	display: block;
-	transition: scale 0.1s;
+.social-link {
+    font-size: large;
+    display: block;
+    transition: scale 0.1s;
 }
-.social-link:hover{
-	scale: 1.1;
-	background: none;
+.social-link:hover {
+    scale: 1.1;
+    background: none;
 }
 .social-link::before {
-	content: "..........";
-	display: block;
+    content: "..........";
+    display: block;
 }
-.social-link::after{
-	content: "..........";
-	display: block;
+.social-link::after {
+    content: "..........";
+    display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+	code{
+		font-size: 9px;
+	}
+    #container {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        outline: none;
+    }
+    #self-portrait {
+        width: 100px;
+        height: 100px;
+    }
+    .project-link, .social-link {
+        font-size: medium;
+    }
 }
