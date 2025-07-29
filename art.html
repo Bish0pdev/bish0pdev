@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDER CONSTRUCTION</title>
+    <link rel="stylesheet" href="Landing.css">
+    <style>
+    /* Wrapping gallery layout */
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .gallery-link {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      flex: 1 1 200px; /* Grow/Shrink basis for responsiveness */
+    }
+
+    .media-item {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #222;
+    }
+
+    video.media-item {
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-link {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="container">
+        <a href="index.html"><h1 class="bright">||Media||</h1></a>
+        <div id="gallery" class="center"></div>
+    </div>
+
+     <script>
+    const mediaFiles = [
+      'media/Jammin.gif',
+      'media/evangellion.GIF',
+      'media/jespook.mp4',
+      'media/ohshitstrege.gif',
+      'media/xrayman.GIF'
+    ];
+
+    const gallery = document.getElementById('gallery');
+
+    mediaFiles.forEach(file => {
+      const lower = file.toLowerCase();
+      const link = document.createElement('a');
+      link.href = file;
+      link.target = '_blank'; // open in new tab
+      link.className = 'gallery-link';
+
+      if (lower.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
+        const img = document.createElement('img');
+        img.src = file;
+        img.className = 'media-item';
+        link.appendChild(img);
+      } else if (lower.match(/\.(mp4|webm|mov)$/)) {
+        const video = document.createElement('video');
+        video.src = file;
+        video.controls = false;
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.className = 'media-item';
+        link.appendChild(video);
+      }
+
+      gallery.appendChild(link);
+    });
+  </script>
+</body>
+</html>
