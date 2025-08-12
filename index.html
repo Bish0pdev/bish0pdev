@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="Landing.css">
 </head>
 <body>
-    
+    <canvas id="bg-particles"></canvas>
+    <br>
+    <br>
+    <div class="frame">
     <div id="container">
-        <pre class="center"><code>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">[ **** ]</a></li>
+                    <li><a href="art.html">[ Art ]</a></li>
+                    <li><a href="words.html">[ Words ]</a></li>
+                    <li><a href="https://os.bishop-dev.com">[ Bishop_OS ]</a></li>
+                </ul>
+            </nav>
+        <pre class="center titleart"><code>
 /$$       /$$           /$$                                 /$$                     
 | $$      |__/          | $$                                | $$                     
 | $$$$$$$  /$$  /$$$$$$$| $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$  /$$$$$$  /$$    /$$
@@ -23,10 +34,8 @@
                                 |__/                       
             </code></pre>
 
-        <div class="center">
-            <a href="art.html">
+        <div class="center tilt-wrapper">
             <img alt="self portrait" id="self-portrait" src="imgs/Banner.gif">
-            </a>
         </div>
 
         <div class="center">
@@ -36,18 +45,15 @@
         <pre class="center"><code><span class="alt"><i>this is awkward. im currently redesigning this! here is a random quote while you wait!</i>
         </span></code></pre>
         <div class="center">
-            <i id="Quote">Loading...</i>
+            <i class="popout" id="Quote">Loading...</i>
         </code></pre>
         <br>
         <br>
-        <div class="container">
-            <h2>Interactive stuff</h2>
-            <a class="project-link" href="https://os.bishop-dev.com">Bishop_os</a>
-        <br>
 
         <div class="container">
+            
             <h2>Socials</h2>
-            <ul>
+            <ul class="social-list">
                 <li class="social-link"><a href="https://www.youtube.com/@bish0p327/videos">Youtube</a></li>
                 <li class="social-link"><a href="https://www.instagram.com/bish0px1/">Instagram</a></li>
                 <li class="social-link"><a href="https://github.com/Bish0pdev">Github</a></li>
@@ -55,9 +61,9 @@
             <br><br>
             <br>
             
+            </div>
         </div>
     </div>
-
     <script>
         async function randomquote() {
             const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
@@ -90,7 +96,34 @@
                 });
             }
         });
-        
+        const photo = document.getElementById("self-portrait");
+        const rect = photo.getBoundingClientRect();
+
+        // adjust these offsets so the "point" matches the phone's screen or tip
+        const offsetX = 0; // pixels from left
+        const offsetY = 0; // pixels from top
+
+        document.addEventListener("mousemove", e => {
+            const bounds = photo.getBoundingClientRect();
+            
+            // mouse position relative to your "pivot point"
+            const relX = e.clientX - (bounds.left + offsetX);
+            const relY = e.clientY - (bounds.top + offsetY);
+
+            // rotation amount — adjust sensitivity here
+            const rotateY = relX / bounds.width * 10;  // left/right tilt
+            const rotateX = -relY / bounds.height * 10; // up/down tilt
+
+            photo.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Optional: reset tilt when mouse leaves
+        photo.addEventListener("mouseleave", () => {
+            photo.style.transform = "rotateX(0deg) rotateY(0deg)";
+        });
+    
+
     </script>
+    <script src="particles.js"></script>
 </body>
 </html>

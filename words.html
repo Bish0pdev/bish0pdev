@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Words Words Words</title>
+  <link rel="stylesheet" href="Landing.css" />
+  <style>
+    #container h1 {
+      color: var(--text-color-bright);
+      text-shadow: 0 0 8px rgba(148, 0, 185, 0.4);
+    }
+
+    .entry-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .entry-link {
+      background-color: rgba(0, 0, 0, 0.6);
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.02) 0,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+      box-shadow: 3px 0 8px rgba(148, 0, 185, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: var(--text-color-bright);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .entry-link:hover {
+      background-color: rgba(148, 0, 185, 0.1);
+      transform: scale(1.01);
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .modal {
+      background-color: rgba(0, 0, 0, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      width: 90%;
+      box-shadow: 8px 0 16px rgba(0, 0, 0, 0.6),
+                  3px 0 6px rgba(148, 0, 185, 0.3);
+      position: relative;
+    }
+
+    .modal h2 {
+      color: var(--text-color-dim);
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    }
+
+    .modal .entry-date {
+      font-size: 12px;
+      color: var(--text-color-dim);
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+    .modal .entry-text {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      font-size: 14px;
+      color: var(--text-color-bright);
+      text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      color: var(--text-color-dim);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .close-button:hover {
+      color: var(--text-color-bright);
+    }
+  </style>
+</head>
+<body>
+<br>
+<br>
+  <div id="container">
+    <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">[ Home ]</a></li>
+                    <li><a href="art.html">[ Art ]</a></li>
+                    <li><a href="words.html">[ ***** ]</a></li>
+                    <li><a href="https://os.bishop-dev.com">[ Bishop_OS ]</a></li>
+                </ul>
+            </nav>
+    <a href="index.html"><h1 class="bright">My Words</h1></a>
+
+    <div class="entry-list">
+      <div class="entry-link" 
+           data-title="Where and Why?" 
+           data-date="July 21st, 2025" 
+           data-content="What lips my lips have kissed, and where, and why<br>Saying “what love exists except yours and myne?”<br>But our smiles left quick, they were often shy<br>The flicker of your somber eyes<br>Leaves me dry <br>I’m falling from that high<br><br>My feelings are complex and I wonder why<br>I can feel anything that I cant describe<br>the vocabulary seems to escape my mind<br>While im setting up these rhymes<br>Trying to uncover the mystery hidden deep inside (my cranium)<br>like dipper pines<br><br>Because gravity falls when I’m close to you<br>The opposite of repulsed,<br>My brains cut in two,<br>And This is all I know how to do<br>Write my feelings without expressing them physically<br>I would say something but nobody's listening<br>and I can only talk to you mentally<br>map out potential conversions, figure out my positioning<br><br>I’m essentially considering <br>if my existence is littering <br>the space between the glitter on your face and your brain stem<br>Counting in base 10 <br>before I make haste and start conversation<br><br>Because my preparation is wasted <br>every time I am placed in a space <br>that has the potential for social acceleration<br><br>And I wonder<br>was I like this for every potential partner?<br>Did they see me as socially awkward?<br>I keep thinking ever since I lost her<br><br>What lips my lips have kissed, and where, and why<br>I did not come up with this line<br>I heard it in a show once, than looked online<br>Keep trying to remember, when I look in your eyes<br>What lips my lips have kissed, and where, and why">
+        Where and Why?
+      </div>
+    <div class="entry-link" 
+        data-title="Driving to Work" 
+        data-date="July 8th, 2025" 
+        data-content="<pre>
+I’m driving to work
+its a quarter past eight
+theres another wreck blocking the road again
+I swear this happens every morning
+I’ve grown numb to it
+I’ve grown numb to it
+
+and I can’t tell what day it is
+And I’m freaking out cause they
+All blend together
+I saw a wreck
+On the road again
+There was a kid
+Crying over his dead mother
+
+And I didn’t know what to do
+So I just kept driving through
+
+Her body was laid out for everyone to see
+And all I could think was I’m glad it wasn’t me
+I wish I was more empathetic
+The ambulance just pulled up with the medic
+They’re covering up the scene
+Bagging the body
+What a great start to the week
+
+I’m stuck in traffic
+Gonna be late again and
+I dont know what to do
+Next to the red and blue
+
+<i>I guess now I have a story to tell at lunch<i>
+        </pre>">
+        Driving to Work
+    </div>
+    <div class="entry-link" 
+           data-title="LobotomyCore!!!!!" 
+           data-date="December 31st, 2024" 
+           data-content="<pre>
+So, as this year has gone on.
+2024 to be specific
+I have come to the conclusion
+That my brain is trying to kill me
+
+...And so
+The idea of a lobotomy is becoming increasingly tempting
+Because if I remove my brain
+There will be nothing left to hurt me
+<i><b>And I’ll be fine</b></i>
+           </pre>">
+        LobotomyCore!!!!!
+      </div>
+      <div class="entry-link" 
+           data-title="templete" 
+           data-date="?????????????" 
+           data-content="This is a templete... go somewhere else to find the real stuff. :) <3">
+        template
+      </div>
+      <!-- Add more entries here -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="close-button" onclick="closeModal()">×</button>
+      <h2 id="modal-title"></h2>
+      <div class="entry-date" id="modal-date"></div>
+      <div class="entry-text" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    const entries = document.querySelectorAll(".entry-link");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDate = document.getElementById("modal-date");
+    const modalContent = document.getElementById("modal-content");
+
+    entries.forEach(entry => {
+      entry.addEventListener("click", () => {
+        modalTitle.textContent = entry.dataset.title;
+        modalDate.textContent = entry.dataset.date;
+        modalContent.innerHTML = entry.dataset.content;
+        modal.style.display = "flex";
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
+  </script>
+</body>
+</html>
